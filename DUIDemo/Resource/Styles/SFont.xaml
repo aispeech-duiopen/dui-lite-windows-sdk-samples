@@ -1,0 +1,7 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:DUIDemo.Resource.Styles">
+    <FontFamily x:Key="FontStyle_DUIDemo_Icon">pack://application:,,,/DUIDemo;component/Resource/Fonts/#iconfont</FontFamily>
+    <FontFamily x:Key="FontStyle_DUIDemo_SourceHanSansCNMedium">pack://application:,,,/DUIDemo;component/Resource/Fonts/SourceHanSansCN-Medium.otf#Source Han Sans CN</FontFamily>
+    <FontFamily x:Key="FontStyle_DUIDemo_SourceHanSansCNRegular">pack://application:,,,/DUIDemo;component/Resource/Fonts/SourceHanSansCN-Regular.otf#Source Han Sans CN</FontFamily>
+</ResourceDictionary>

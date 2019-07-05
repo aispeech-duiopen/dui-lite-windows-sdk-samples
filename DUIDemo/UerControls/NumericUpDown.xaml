@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="DUIDemo.UerControls.NumericUpDown"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DUIDemo.UerControls"
+             mc:Ignorable="d" 
+          Width="122" Height="36" MinHeight="36" MinWidth="100" Name="us">
+    <UserControl.Resources>
+        <Style x:Key="LeftArrowButtonStyle" BasedOn="{x:Null}" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Border CornerRadius="4,0,0,4" BorderThickness="1" BorderBrush="#DCDFE6" Background="#F5F7FA">
+                                <TextBlock Name="tbl_Symbol" Text="&#xe8e2;" FontSize="12" Foreground="#959595"
+                                           Style="{StaticResource TextBlockStyle_DUIDemo_iFont}">
+                                </TextBlock>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="tbl_Symbol" Property="Foreground" Value="Black"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="RightArrowButtonStyle" BasedOn="{x:Null}" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Border CornerRadius="0,4,4,0" BorderThickness="1" BorderBrush="#DCDFE6" Background="#F5F7FA">
+                                <TextBlock Name="tbl_Symbol" Text="&#xe7b2;" FontSize="12" Foreground="#959595"
+                                           Style="{StaticResource TextBlockStyle_DUIDemo_iFont}">
+                                </TextBlock>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="tbl_Symbol" Property="Foreground" Value="Black"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <Grid x:Name="ValueGrid" Width="Auto">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="34"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="34"/>
+            </Grid.ColumnDefinitions>
+            <TextBox TextChanged="tbValue_TextChanged" Foreground="{Binding ElementName=us, Path=Foreground,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" 
+                         BorderBrush="#DCDFE6" BorderThickness="1" 
+                         Style="{x:Null}" VerticalContentAlignment="Center" 
+                         x:Name="tbValue"  PreviewTextInput="tbValue_PreviewTextInput"                      
+                         HorizontalContentAlignment="Center" Grid.RowSpan="2"/>
+            <Button Style="{DynamicResource RightArrowButtonStyle}" Width="Auto" x:Name="UpButton" Grid.Column="2" Grid.RowSpan="2" Click="UpButton_Click" Focusable="False" />
+            <Button HorizontalAlignment="Stretch" Style="{DynamicResource LeftArrowButtonStyle}" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" x:Name="DownButton" Grid.Column="0" Margin="0" Click="DownButton_Click" Grid.Row="0" Grid.RowSpan="2" Focusable="False">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="-1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>

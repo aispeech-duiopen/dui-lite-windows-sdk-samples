@@ -1,0 +1,76 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:DUIDemo.Resource.Styles">
+    
+    <!--#region 主要按钮-->
+    <SolidColorBrush x:Key="Main.Normal.Background" Color="#2196f3"/>
+    <SolidColorBrush x:Key="Main.Normal.Foreground" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Main.Normal.Border" Color="#2196f3"/>
+
+    <SolidColorBrush x:Key="Main.MouseOver.Background" Color="#2babf6"/>
+    <SolidColorBrush x:Key="Main.MouseOver.Foreground" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Main.MouseOver.Border" Color="#2babf6"/>
+
+    <SolidColorBrush x:Key="Main.Pressed.Background" Color="#0087dc"/>
+    <SolidColorBrush x:Key="Main.Pressed.Foreground" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Main.Pressed.Border" Color="#0087dc"/>
+
+    <SolidColorBrush x:Key="Main.Disabled.Background" Color="#90caf9"/>
+    <SolidColorBrush x:Key="Main.Disabled.Foreground" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Main.Disabled.Border" Color="#90caf9"/>
+    <!--#endregion-->
+
+    <!--#region 次要按钮-->
+    <SolidColorBrush x:Key="Secondary.Normal.Background" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Secondary.Normal.Foreground" Color="#0097FA"/>
+    <SolidColorBrush x:Key="Secondary.Normal.Border" Color="#2196f3"/>
+
+    <SolidColorBrush x:Key="Secondary.MouseOver.Background" Color="#2196f3"/>
+    <SolidColorBrush x:Key="Secondary.MouseOver.Foreground" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Secondary.MouseOver.Border" Color="#2196f3"/>
+
+    <SolidColorBrush x:Key="Secondary.Pressed.Background" Color="#0087dc"/>
+    <SolidColorBrush x:Key="Secondary.Pressed.Foreground" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Secondary.Pressed.Border" Color="#0087dc"/>
+
+    <SolidColorBrush x:Key="Secondary.Disabled.Background" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Secondary.Disabled.Foreground" Color="#90CAF9"/>
+    <SolidColorBrush x:Key="Secondary.Disabled.Border" Color="#90CAF9"/>
+    <!--#endregion-->
+
+    <!--#region 辅助按钮-->
+    <SolidColorBrush x:Key="Auxiliary.Normal.Background" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Auxiliary.Normal.Foreground" Color="#606266"/>
+    <SolidColorBrush x:Key="Auxiliary.Normal.Border" Color="#DCDFE6"/>
+
+    <SolidColorBrush x:Key="Auxiliary.MouseOver.Background" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Auxiliary.MouseOver.Foreground" Color="#606266"/>
+    <SolidColorBrush x:Key="Auxiliary.MouseOver.Border" Color="#2196f3"/>
+
+    <SolidColorBrush x:Key="Auxiliary.Pressed.Background" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Auxiliary.Pressed.Foreground" Color="#606266"/>
+    <SolidColorBrush x:Key="Auxiliary.Pressed.Border" Color="#0087dc"/>
+
+    <SolidColorBrush x:Key="Auxiliary.Disabled.Background" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Auxiliary.Disabled.Foreground" Color="#909399"/>
+    <SolidColorBrush x:Key="Auxiliary.Disabled.Border" Color="#E4E7ED"/>
+    <!--#endregion-->
+
+    <!--#region 辅助按钮-->
+    <SolidColorBrush x:Key="Auxiliary2.Normal.Background" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Auxiliary2.Normal.Foreground" Color="#606266"/>
+    <SolidColorBrush x:Key="Auxiliary2.Normal.Border" Color="#DCDFE6"/>
+
+    <SolidColorBrush x:Key="Auxiliary2.MouseOver.Background" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Auxiliary2.MouseOver.Foreground" Color="#606266"/>
+    <SolidColorBrush x:Key="Auxiliary2.MouseOver.Border" Color="#2196f3"/>
+
+    <SolidColorBrush x:Key="Auxiliary2.Pressed.Background" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Auxiliary2.Pressed.Foreground" Color="#606266"/>
+    <SolidColorBrush x:Key="Auxiliary2.Pressed.Border" Color="#0087dc"/>
+
+    <SolidColorBrush x:Key="Auxiliary2.Disabled.Background" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Auxiliary2.Disabled.Foreground" Color="#909399"/>
+    <SolidColorBrush x:Key="Auxiliary2.Disabled.Border" Color="#E4E7ED"/>
+    <!--#endregion-->
+</ResourceDictionary>

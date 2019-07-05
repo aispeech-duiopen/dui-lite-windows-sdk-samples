@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23B63538-2C04-442F-9E62-56CA61246840}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DUIDemo</RootNamespace>
+    <AssemblyName>DUIDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>speechLogo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Helper\BinaryHelper.cs" />
+    <Compile Include="Helper\EnDeCryptHelper.cs" />
+    <Compile Include="Helper\PathHelper.cs" />
+    <Compile Include="Helper\RegexHelper.cs" />
+    <Compile Include="Model\DUI\MEnNASRConfig.cs" />
+    <Compile Include="UerControls\NumericUpDown.xaml.cs">
+      <DependentUpon>NumericUpDown.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WinSetting.xaml.cs">
+      <DependentUpon>WinSetting.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Enums\CommonEnum.cs" />
+    <Compile Include="Enums\InfoEnum.cs" />
+    <Compile Include="Helper\DUILiteHelper.cs" />
+    <Compile Include="Helper\EnumHelper.cs" />
+    <Compile Include="Helper\JsonHelper.cs" />
+    <Compile Include="Helper\NetHelper.cs" />
+    <Compile Include="Helper\PublicFunction.cs" />
+    <Compile Include="Helper\WinmmDLLHelper.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Pages\PDUISelect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Styles\SBrush.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Styles\SButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Styles\SComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Styles\SConverter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Styles\SFont.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Styles\SRadioButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Styles\SSlider.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Styles\STextBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Styles\STextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resource\Styles\SToggleButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UerControls\NumericUpDown.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\WinSetting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\Converter\TabSelectToIsChecked.cs" />
+    <Compile Include="Model\DUI\MAuthConfig.cs" />
+    <Compile Include="Model\DUI\MConfig.cs" />
+    <Compile Include="Model\DUI\MLogConfig.cs" />
+    <Compile Include="Model\DUI\MNASRConfig.cs" />
+    <Compile Include="Model\DUI\MNASRGramConfig.cs" />
+    <Compile Include="Model\DUI\MNASRParam.cs" />
+    <Compile Include="Model\DUI\MNativeASRReturn.cs" />
+    <Compile Include="Model\DUI\MOut.cs" />
+    <Compile Include="Model\DUI\MRes.cs" />
+    <Compile Include="Model\DUI\MTTSConfig.cs" />
+    <Compile Include="Model\DUI\MTTSRes.cs" />
+    <Compile Include="Model\DUI\MWakeReturn.cs" />
+    <Compile Include="Model\DUI\MWakeupConfig.cs" />
+    <Compile Include="Model\DUI\MWakeupParam.cs" />
+    <Compile Include="Model\MDUIManage.cs" />
+    <Compile Include="Model\ModelBase.cs" />
+    <Compile Include="Model\MVoice.cs" />
+    <Compile Include="Model\Player\PCMPlayer.cs" />
+    <Compile Include="Pages\PDUISelect.xaml.cs">
+      <DependentUpon>PDUISelect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Resource Include="Resource\Images\bgTitle2.png" />
+    <Resource Include="Resource\Images\bgTitle.png" />
+    <Resource Include="Resource\Images\PersonIcon\可爱女童然然.png" />
+    <Resource Include="Resource\Images\PersonIcon\可爱男童连连.png" />
+    <Resource Include="Resource\Images\PersonIcon\商务女声璃璃.png" />
+    <Resource Include="Resource\Images\PersonIcon\女声杨阿姨.png" />
+    <Resource Include="Resource\Images\PersonIcon\女学生初阳.png" />
+    <Resource Include="Resource\Images\PersonIcon\女老师小妖.png" />
+    <Resource Include="Resource\Images\PersonIcon\女老师行者.png" />
+    <Resource Include="Resource\Images\PersonIcon\女老师风吟.png" />
+    <Resource Include="Resource\Images\PersonIcon\娱报女声璃璃.png" />
+    <Resource Include="Resource\Images\PersonIcon\故事女声小静.png" />
+    <Resource Include="Resource\Images\PersonIcon\故事女声砖砖.png" />
+    <Resource Include="Resource\Images\PersonIcon\标准女声安宁.png" />
+    <Resource Include="Resource\Images\PersonIcon\标准女声小妖.png" />
+    <Resource Include="Resource\Images\PersonIcon\标准女声小浩.png" />
+    <Resource Include="Resource\Images\PersonIcon\标准女声朱株儿.png" />
+    <Resource Include="Resource\Images\PersonIcon\标准女声瑶瑶.png" />
+    <Resource Include="Resource\Images\PersonIcon\标准女声蓝雨.png" />
+    <Resource Include="Resource\Images\PersonIcon\标准女生小浩.png" />
+    <Resource Include="Resource\Images\PersonIcon\标准女童佚佚.png" />
+    <Resource Include="Resource\Images\PersonIcon\标准平和小佚.png" />
+    <Resource Include="Resource\Images\PersonIcon\标准男声小军.png" />
+    <Resource Include="Resource\Images\PersonIcon\标准男声小江.png" />
+    <Resource Include="Resource\Images\PersonIcon\标准男声小睿.png" />
+    <Resource Include="Resource\Images\PersonIcon\标准男声秋木.png" />
+    <Resource Include="Resource\Images\PersonIcon\标准男声考拉.png" />
+    <Resource Include="Resource\Images\PersonIcon\标准男童堂堂.png" />
+    <Resource Include="Resource\Images\PersonIcon\标准男童方方.png" />
+    <Resource Include="Resource\Images\PersonIcon\沉稳幽默纲叔.png" />
+    <Resource Include="Resource\Images\PersonIcon\淡定风趣葛爷.png" />
+    <Resource Include="Resource\Images\PersonIcon\清亮女声小洁.png" />
+    <Resource Include="Resource\Images\PersonIcon\清新女声小妖.png" />
+    <Resource Include="Resource\Images\PersonIcon\清新女声零八.png" />
+    <Resource Include="Resource\Images\PersonIcon\清纯女声考拉.png" />
+    <Resource Include="Resource\Images\PersonIcon\清脆女声小颖.png" />
+    <Resource Include="Resource\Images\PersonIcon\温柔女声小兰.png" />
+    <Resource Include="Resource\Images\PersonIcon\甜美女神小玲.png" />
+    <Resource Include="Resource\Images\PersonIcon\电台女声璃璃.png" />
+    <Resource Include="Resource\Images\PersonIcon\男声季老师.png" />
+    <Resource Include="Resource\Images\PersonIcon\知性女声晶晶.png" />
+    <Resource Include="Resource\Images\PersonIcon\磁性男声俞老师.png" />
+    <Resource Include="Resource\Images\PersonIcon\邻家女声小妮.png" />
+    <Resource Include="Resource\Images\PersonIcon\风趣幽默星哥.png" />
+    <Resource Include="Resource\Images\PersonIcon\飘逸女声小静.png" />
+    <Resource Include="Resource\Images\PersonIcon\高冷女声零八.png" />
+    <Resource Include="Resource\Images\PersonIcon\鬼故事绝音.png" />
+    <Resource Include="speechLogo.ico" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <Resource Include="Resource\Fonts\iconfont.ttf" />
+    <Resource Include="Resource\Fonts\SourceHanSansCN-Medium.otf" />
+    <Resource Include="Resource\Fonts\SourceHanSansCN-Regular.otf" />
+    <None Include="Resource\Res\TbVoice.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Images\中英文Logo.png" />
+    <Resource Include="Resource\Images\英文Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

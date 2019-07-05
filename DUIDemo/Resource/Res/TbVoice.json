@@ -1,0 +1,296 @@
+[
+        {
+            "ID": "1",
+            "Speaker": "女老师风吟；女声；威严正式；中英混合",
+            "ResName": "feyinf",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "2",
+            "Speaker": "标准女声小妖；女声；慵懒烟嗓；中英混合",
+            "ResName": "xiyaof",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "3",
+            "Speaker": "清脆女生小颖；女声；自然；中英混合",
+            "ResName": "lzyinfa",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "4",
+            "Speaker": "标准女声瑶瑶；女声；自然；中英混合",
+            "ResName": "luyaof",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "5",
+            "Speaker": "鬼故事绝音；女声；自然；中英混合",
+            "ResName": "juyinf_guigushi",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "6",
+            "Speaker": "女老师小妖；女声；自然；中英混合",
+            "ResName": "xiyaof_laoshi",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "7",
+            "Speaker": "清新女声零八；女声；自然；中英混合",
+            "ResName": "linbaf_qingxin",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "8",
+            "Speaker": "高冷女声零八；女声；自然；中英混合",
+            "ResName": "linbaf_gaoleng",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "9",
+            "Speaker": "故事女声小静；女声；自然；中英混合",
+            "ResName": "xjingf_gushi",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "10",
+            "Speaker": "故事女声砖砖；女声；自然；中英混合",
+            "ResName": "zzhuaf",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "11",
+            "Speaker": "标准女声蓝雨；女声；温柔甜美；中英混合",
+            "ResName": "lanyuf",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "12",
+            "Speaker": "飘逸女声小静；女声；商务知性；中英混合",
+            "ResName": "xjingf",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "13",
+            "Speaker": "标准女声小浩；女声；干练；中英混合",
+            "ResName": "lucyfa",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "14",
+            "Speaker": "甜美女神小玲；女声；甜美、自然、性感；中英混合",
+            "ResName": "zhilingfa",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "15",
+            "Speaker": "甜美女神小玲；女声；甜美、自然、性感；中英混合",
+            "ResName": "zhilingf",
+            "IsLocal": "false"
+        },
+        {
+            "ID": "16",
+            "Speaker": "娱报女声璃璃；女声；娱乐播报、活力；中英混合",
+            "ResName": "lili1f_yubo",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "17",
+            "Speaker": "女学生初阳；女声；可爱；中英混合",
+            "ResName": "cyangf",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "18",
+            "Speaker": "标准女声安宁；女声；温婉；中英混合",
+            "ResName": "aningf",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "19",
+            "Speaker": "女声杨阿姨；女声；和蔼可亲；中英混合",
+            "ResName": "yaayif",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "20",
+            "Speaker": "女老师行者；女声；严肃；中英混合",
+            "ResName": "xizhef",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "21",
+            "Speaker": "邻家女声小妮；女声；温柔亲切；中英混合",
+            "ResName": "hyanifa",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "22",
+            "Speaker": "邻家女声小妮；女声；温柔亲切；中文",
+            "ResName": "hyanif",
+            "IsLocal": "false"
+        },
+        {
+            "ID": "23",
+            "Speaker": "标准女声朱株儿；女声；故事；中英混合",
+            "ResName": "zzherf",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "24",
+            "Speaker": "清新女声小妖；女声；清新甜美；中英混合",
+            "ResName": "xiyaof_qingxin",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "25",
+            "Speaker": "电台女声璃璃；女声；电台、安静；中英混合",
+            "ResName": "lili1f_diantai",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "26",
+            "Speaker": "知性女声晶晶；女声；知性大方；中英混合",
+            "ResName": "jjingf",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "27",
+            "Speaker": "商务女声璃璃；女声；商务大气；中英混合",
+            "ResName": "lili1f_shangwu",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "28",
+            "Speaker": "清亮女声小洁；女声；亲和；中英混合",
+            "ResName": "smjief",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "29",
+            "Speaker": "清纯女声考拉；女声；端庄优雅；中英混合",
+            "ResName": "kaolaf",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "30",
+            "Speaker": "温柔女声小兰；女声；温柔、邻家；中英混合",
+            "ResName": "gqlanf",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "31",
+            "Speaker": "标准平和小佚；女声；传统；中英混合",
+            "ResName": "anonyf",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "32",
+            "Speaker": "可爱男童连连；男童；活泼可爱；中英混合",
+            "ResName": "lzliafa",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "33",
+            "Speaker": "可爱男童连连；男声；活泼可爱；中英混合",
+            "ResName": "lzliaf",
+            "IsLocal": "false"
+        },
+        {
+            "ID": "34",
+            "Speaker": "标准男童方方；男童；自然活泼；中英混合",
+            "ResName": "gdfanf_boy",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "35",
+            "Speaker": "标准男童堂堂；男童；憨厚；中英混合",
+            "ResName": "boy",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "36",
+            "Speaker": "可爱女童然然；女童；天真俏皮；中英混合",
+            "ResName": "qianranfa",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "37",
+            "Speaker": "可爱女童然然；女童；天真俏皮；中英混合",
+            "ResName": "qianranf",
+            "IsLocal": "false"
+        },
+        {
+            "ID": "38",
+            "Speaker": "标准女童佚佚；女童；传统；中文",
+            "ResName": "anonyg",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "39",
+            "Speaker": "沉稳幽默纲叔；男声；传统；中英文混合",
+            "ResName": "gdgm",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "40",
+            "Speaker": "风趣幽默星哥；男声；传统；中文",
+            "ResName": "zxcm",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "41",
+            "Speaker": "淡定风趣葛爷；男声；传统；中英混合",
+            "ResName": "geyou",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "42",
+            "Speaker": "标准男声小军；男声；新闻播报；中英混合",
+            "ResName": "xijunma",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "43",
+            "Speaker": "标准男声小军；男声；新闻播报；中英混合",
+            "ResName": "xijunm",
+            "IsLocal": "false"
+        },
+        {
+            "ID": "44",
+            "Speaker": "标准男声考拉；男声；标准；中英混合",
+            "ResName": "kaolam",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "45",
+            "Speaker": "标准男声秋木；男声；活泼开朗；中英混合",
+            "ResName": "qiumum",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "46",
+            "Speaker": "标准男声小睿；男声；活力朝气；中英混合",
+            "ResName": "tzruim",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "47",
+            "Speaker": "标准男声小江；男声；亲切友善；中英混合",
+            "ResName": "wjianm",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "48",
+            "Speaker": "磁性男声俞老师；男声；自然；中英混合",
+            "ResName": "yukaim_all",
+            "IsLocal": "true"
+        },
+        {
+            "ID": "49",
+            "Speaker": "男声季老师；男声；成熟稳重；中英混合",
+            "ResName": "jlshim",
+            "IsLocal": "true"
+        }
+    ]

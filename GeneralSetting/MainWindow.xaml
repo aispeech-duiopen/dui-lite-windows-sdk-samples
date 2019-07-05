@@ -1,0 +1,25 @@
+﻿<Window x:Class="GeneralSetting.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GeneralSetting"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <TextBox Name="tb_Show" Height="150" Width="250" TextWrapping="Wrap" Text="aihome;airobot;aicar;comm;aienglish">
+            </TextBox>
+            <TextBox Name="tb_Add" Height="30" Width="250" Margin="20" VerticalContentAlignment="Center">
+            </TextBox>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Name="btn_Add" Height="30" Width="100" Margin="0" Content="添加"
+                        Click="btn_Add_Click">
+                </Button>
+                <Button Name="btn_GeneralSetting" Height="30" Width="100" Margin="20,0,0,0" Content="生成文件"
+                    Click="btn_GeneralSetting_Click">
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

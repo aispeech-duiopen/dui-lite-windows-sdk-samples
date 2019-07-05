@@ -1,0 +1,22 @@
+﻿<Application x:Class="DUIDemo.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:DUIDemo"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/DUIDemo;component/Resource/Styles/SBrush.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/DUIDemo;component/Resource/Styles/SFont.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/DUIDemo;component/Resource/Styles/STextBlock.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/DUIDemo;component/Resource/Styles/SButton.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/DUIDemo;component/Resource/Styles/SRadioButton.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/DUIDemo;component/Resource/Styles/STextBox.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/DUIDemo;component/Resource/Styles/SSlider.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/DUIDemo;component/Resource/Styles/SComboBox.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/DUIDemo;component/Resource/Styles/SToggleButton.xaml"/>
+                <!--<ResourceDictionary Source="pack://application:,,,/DUIDemo;component/Resource/Styles/SConverter.xaml"/>-->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
