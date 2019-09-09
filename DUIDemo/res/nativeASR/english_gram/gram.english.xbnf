@@ -1,0 +1,20 @@
+#音乐命令
+$MUSIC_CMD_PLAY = (play(music| the song) | listen to the(songs|music))/operation="play"/;
+$MUSIC_CMD_NEXT = (next one|change one)/operation="next"/;
+$MUSIC_CMD_ALL = ($MUSIC_CMD_PLAY | $MUSIC_CMD_NEXT)/domain="music"/;
+
+#音量命令
+
+#家电设备控制命令
+$DEVICE = (TV|light)/k="object"/;
+$DEVICE_CMD_OPEN = ((turn on the)/operation="open"/$DEVICE);
+$DEVICE_CMD_CLOSE = ((turn off the)/operation="close"/$DEVICE);
+$DEVICE_CMD_ALL = ($DEVICE_CMD_OPEN | $DEVICE_CMD_CLOSE)/domain="device_control"/;
+
+#唤醒词
+$WAKEUP_WORD = [hello xiao le];
+
+#合并所有说法
+$SEMANTIC_OUTPUT = $WAKEUP_WORD($MUSIC_CMD_ALL | $DEVICE_CMD_ALL);
+
+( \<s\> ($SEMANTIC_OUTPUT) \<\/s\> )

@@ -273,6 +273,59 @@
     <Resource Include="Resource\Fonts\iconfont.ttf" />
     <Resource Include="Resource\Fonts\SourceHanSansCN-Medium.otf" />
     <Resource Include="Resource\Fonts\SourceHanSansCN-Regular.otf" />
+    <Content Include="Resource\DLLs\dds-sdk-v2.dll" />
+    <Content Include="Resource\DLLs\DUILite-SDK.dll" />
+    <Content Include="Resource\DLLs\duilite.dll" />
+    <Content Include="Resource\DLLs\msvcp140.dll" />
+    <Content Include="Resource\DLLs\vcruntime140.dll" />
+    <Content Include="Resource\DLLs\winmm.dll" />
+    <Content Include="Resource\DLLs\winmmbase.dll" />
+    <Content Include="res\fesp_4+1\AEC_ch5-2-ch4_1ref_common_20180727_v0.9.4.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\fesp_4+1\app_wakeup_aihome.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\fesp_4+1\ULFA_asr_ch4_2_ch4_35mm_20181224_v1.1.0.9_post0.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="res\nativeASR\.DS_Store" />
+    <Content Include="res\nativeASR\english_gram\ebnfc.aicar.english.0.0.2.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\nativeASR\english_gram\gram.english.xbnf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\nativeASR\english_gram\ngram.english.v0.1.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\nativeASR\gram\ebnfc.aicar.1.2.0.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\nativeASR\gram\gram.xbnf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\nativeASR\gram\ngram.xinhangye.v0.1.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\nativeTTS\aitts_sent_dict_idx_2.0.4_20190215.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\nativeTTS\feyinf_common_back_ce_bap_local.v2.1.0.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\nativeTTS\local_front.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\nativeTTS\lucyf_common_back_ce_local.v2.1.0.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\vad\vad_aihome_v0.7.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\wakeup\wakeup.modify.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resource\Res\TbVoice.json" />
   </ItemGroup>
   <ItemGroup>
@@ -310,7 +363,11 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>xcopy "$(ProjectDir)Resource/DLLs" "$(ProjectDir)$(OutDir)" /s /e /h /c /y</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
