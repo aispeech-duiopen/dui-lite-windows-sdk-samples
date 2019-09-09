@@ -4,4 +4,4 @@
 
 体验的功能：唤醒、在线识别、在线合成、离线识别、离线合成
 
-开发文档：见doc目录， 产品创建DUI平台（https://www.duiopen.com/）
+开发文档：见doc目录， 产品创建见DUI平台（https://www.duiopen.com/）
