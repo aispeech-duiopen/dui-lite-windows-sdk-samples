@@ -1,15 +1,8 @@
-﻿using DUIDemo.Enums;
-using DUIDemo.Helper;
-using DUIDemo.Model.DUI;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static DUIDemo.Helper.DUILiteHelper;
+﻿using ASRDemo.Enums;
+using ASRDemo.Helper;
+using ASRDemo.Model.DUI;
 
-namespace DUIDemo.Model
+namespace ASRDemo.Model
 {
     public class MDUIManage
     {
@@ -130,7 +123,6 @@ namespace DUIDemo.Model
         {
             AuthConfig = new MAuthConfig();
             AuthConfig.PRODUCT_ID = "278581232";
-            //AuthConfig.PRODUCT_ID = "278583645";
             AuthConfig.PROFILE_PATH = "duilite_profile";
         }
 
@@ -138,17 +130,13 @@ namespace DUIDemo.Model
         {
             WakeupConfig = new MWakeupConfig();
             WakeupConfig.resBinPath = "./res/wakeup/wakeup.modify.bin";
-            //WakeupConfig.vadBinPath = "./res/wakeup/vad_aihome_v0.7.bin";
+            WakeupConfig.vadBinPath = "./res/wakeup/vad_aihome_v0.7.bin";
         }
 
         private void InitWakeupParam()
         {
             WakeupParam = new MWakeupParam();
-            string path = AppDomain.CurrentDomain.BaseDirectory + "AISpeech.config";
-            string words = new ConfigHelper(path).GetConfig("words");
-            string thresh = new ConfigHelper(path).GetConfig("thresh");
-            WakeupParam.env = "words=" + words + ";" + "thresh=" + thresh + ";major=1;";
-            //WakeupParam.env = "words=ni hao xiao le,ni hao xiao xing;thresh=0.30,0.24;major=1,1;";
+            WakeupParam.env = "words=ni hao xiao le,ni hao xiao xing;thresh=0.30,0.24;major=1,1;";
         }
 
 
@@ -161,7 +149,7 @@ namespace DUIDemo.Model
             Config.NATIVE_VAD_NEWCFG = new MRes()
             {
                 resBinPath = "./res/vad/vad_aihome_v0.7.bin",
-                pauseTime = 2 * 1000
+                pauseTime = 500
             };
         }
 

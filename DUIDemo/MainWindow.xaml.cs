@@ -26,6 +26,7 @@ namespace DUIDemo
         {
             InitializeComponent();
             this.Navigate(new PDUISelect());
+            
         }
     }
 }

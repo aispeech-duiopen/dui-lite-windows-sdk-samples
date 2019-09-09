@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DUIDemo.Model.DUI
+namespace ASRDemo.Model.DUI
 {
-    public class MWakeupConfig
+    public class MNASRGramConfig
     {
         public string resBinPath { get; set; }
-        //public string vadBinPath { get; set; }
     }
 }

@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DUIDemo.Helper
+namespace ASRDemo.Helper
 {
     public static class DUILiteHelper
     {
@@ -136,25 +136,6 @@ namespace DUIDemo.Helper
         public static extern void DUILiteNativeASRFeed(string data, int len);
 
         #endregion
-
-        #endregion
-
-        #region 线性麦克风阵列
-
-        [DllImport("DUILite-SDK.dll", EntryPoint = "duiliteFesplNew", CallingConvention = CallingConvention.Cdecl)]
-        public static extern int DUILiteFesplNew(string cfg);
-
-        [DllImport("DUILite-SDK.dll", EntryPoint = "duiliteFesplStart", CallingConvention = CallingConvention.Cdecl)]
-        public static extern int DUILiteFesplStart(string cfg);
-
-        [DllImport("DUILite-SDK.dll", EntryPoint = "duiliteFesplStop", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void DUILiteFesplStop();
-
-        [DllImport("DUILite-SDK.dll", EntryPoint = "duiliteFesplRelease", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void DUILiteFesplRelease();
-
-        [DllImport("DUILite-SDK.dll", EntryPoint = "duiliteFesplFeed", CallingConvention = CallingConvention.Cdecl)]
-        public static extern int DUILiteFesplFeed(string data, int len);
 
         #endregion
 

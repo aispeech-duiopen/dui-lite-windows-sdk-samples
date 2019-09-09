@@ -52,6 +52,9 @@ namespace DUIDemo.Pages
         private List<MVoice> VoiceList = new List<MVoice>();
         private string englishConfig = "{\"env\": \"use_xbnf_rec=1;use_frame_split=1;hold_conf=1;\"}";
         private string ARSCloudParam = "{\"enableRealTimeFeedback\":true, \"enableVAD\":false, \"enablePunctuation\":true, \"language\":\"zh-CN\", \"res\":\"aihome\"}";
+        public static bool IsExistGram = System.IO.File.Exists(AppDomain.CurrentDomain.BaseDirectory + "res/nativeASR/gram/gram.xbnf");
+
+
 
         public PDUISelect()
         {
@@ -422,8 +425,30 @@ namespace DUIDemo.Pages
                 byte[] managedArray = new byte[len];
                 Marshal.Copy(msg, managedArray, 0, len);
                 string result = Encoding.UTF8.GetString(managedArray);
-                var data = JsonHelper.Parse<MNativeASRReturn>(result);
-                manager.OutResult.ARSRealTimeOut = OrginalString + data.ngram.rec;
+                if (IsExistGram)
+                {
+                    var data = JsonHelper.Parse<MNativeASRReturn>(result);
+                    StringBuilder sb = new StringBuilder();
+                    sb.Append("gram:");
+                    sb.AppendLine();
+                    sb.Append("置信度:" + data.grammar.conf);
+                    sb.AppendLine();
+                    sb.Append("结果:" + data.grammar.rec);
+                    sb.AppendLine();
+                    sb.Append("ngram:");
+                    sb.AppendLine();
+                    sb.Append("置信度:" + data.ngram.conf);
+                    sb.AppendLine();
+                    sb.Append("结果:" + data.ngram.rec);
+
+                    manager.OutResult.ARSRealTimeOut = OrginalString + sb.ToString();
+                    //manager.OutResult.ARSRealTimeOut = OrginalString + data.grammar.rec;
+                }
+                else
+                {
+                    var data = JsonHelper.Parse<Ngram>(result);
+                    manager.OutResult.ARSRealTimeOut = OrginalString + data.rec;
+                }
                 this.Dispatcher.BeginInvoke((Action)delegate ()
                 {
                     if (App.DUIManager.ASRMode == EASRMode.UnWakeup)
@@ -443,10 +468,21 @@ namespace DUIDemo.Pages
                     manager.OutResult = new Model.DUI.MOut();
                 }
                 var data = JsonHelper.Parse<MNativeASRReturn>(strInTime);
-                if (data.ngram != null)
-                {
-                    manager.OutResult.ARSRealTimeOut = OrginalString + data.ngram.rec;
-                }
+                //if (IsExistGram)
+                //{
+                //    if (data.grammar != null)
+                //    {
+                //        manager.OutResult.ARSRealTimeOut = OrginalString + data.grammar.rec;
+                //    }
+                //}
+                //else
+                //{
+                    if (data.ngram != null)
+                    {
+                        manager.OutResult.ARSRealTimeOut = OrginalString + data.ngram.rec;
+                    }
+                //}
+
                 //manager.OutResult.ARSRealTimeOut = OrginalString + strInTime;
             }
 
@@ -477,6 +513,7 @@ namespace DUIDemo.Pages
             switch (App.DUIManager.ASRLanguage)
             {
                 case EASRLanguage.Simple_Chinese:
+                    //App.DUIManager.Config.CLOUD_ASR_RES_MODULE = "aimedical";
                     App.DUIManager.Config.CLOUD_ASR_RES_MODULE = "comm";
                     App.DUIManager.NASRConfig.resBinPath = "./res/nativeASR/gram/ngram.xinhangye.v0.1.bin";
                     App.DUIManager.NASRParam.ebnfFile = "./res/nativeASR/gram/gram.xbnf";
@@ -639,7 +676,7 @@ namespace DUIDemo.Pages
                 double speed = sld_Speed.Value;
                 int volumn = PublicFunction.intParse(sld_Volumn.Value);
                 DUILiteCloudTTSStart(bytes, voice.ResName, speed, volumn);
-                //DUILiteCloudTTSStart(bytes, "zhilingf", speed, volumn);
+                //DUILiteCloudTTSStart(bytes, "zhilingfa", speed, volumn);
             }
             else
             {
@@ -843,7 +880,15 @@ namespace DUIDemo.Pages
                             string wakeupParam = JsonHelper.ToJson(manager.WakeupParam);
                             result = DUILiteHelper.DUILiteWakeupStart(wakeupParam);
 
-                            result = DUILiteHelper.DUILiteNativeASRNew(gramcfg, gramparam, asrcfg);
+                            if (!IsExistGram)
+                            {
+                                result = DUILiteHelper.DUILiteNativeASRNew(null, null, "{\"resBinPath\":\"./res/nativeASR/gram/ngram.xinhangye.v0.1.bin\"}");
+                            }
+                            else
+                            {
+                                result = DUILiteHelper.DUILiteNativeASRNew(gramcfg, gramparam, asrcfg);
+
+                            }
                             if (App.DUIManager.ASRLanguage == EASRLanguage.English)
                             {
                                 //string enConfig = JsonHelper.ToJson(manager.EnNASRConfig);
@@ -858,7 +903,17 @@ namespace DUIDemo.Pages
                             tb_ARS.Clear();
                             break;
                         case EASRMode.UnWakeup:
-                            result = DUILiteHelper.DUILiteNativeASRNew(gramcfg, gramparam, asrcfg);
+                            if (!IsExistGram)
+                            {
+                                result = DUILiteHelper.DUILiteNativeASRNew(null, null, "{\"resBinPath\":\"./res/nativeASR/gram/ngram.xinhangye.v0.1.bin\"}");
+                            }
+                            else
+                            {
+                                result = DUILiteHelper.DUILiteNativeASRNew(gramcfg, gramparam, asrcfg);
+
+                            }
+
+                            //result = DUILiteHelper.DUILiteNativeASRNew(gramcfg, gramparam, asrcfg);
                             if (App.DUIManager.ASRLanguage == EASRLanguage.English)
                             {
                                 //string enConfig = JsonHelper.ToJson(manager.EnNASRConfig);
@@ -867,6 +922,7 @@ namespace DUIDemo.Pages
                             }
                             else
                             {
+                                var a = JsonHelper.ToJson(manager.EnNASRConfig);
                                 result = DUILiteHelper.DUILiteNativeASRStart(JsonHelper.ToJson(manager.EnNASRConfig));
                             }
                             break;
